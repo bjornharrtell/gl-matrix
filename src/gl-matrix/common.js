@@ -30,7 +30,7 @@ export const RANDOM = Math.random;
 export const ENABLE_SIMD = false;
 
 // Capability detection
-export const SIMD_AVAILABLE = (ARRAY_TYPE === Float32Array) && ('SIMD' in global);
+export const SIMD_AVAILABLE = (ARRAY_TYPE === Float32Array) && (typeof SIMD !== 'undefined');
 export const USE_SIMD = ENABLE_SIMD && SIMD_AVAILABLE;
 
 /**
